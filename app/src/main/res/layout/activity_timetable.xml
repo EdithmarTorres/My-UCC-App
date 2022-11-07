@@ -1,0 +1,385 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".Timetable.TimetableActivity">
+
+    <androidx.coordinatorlayout.widget.CoordinatorLayout
+
+
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <com.google.android.material.appbar.AppBarLayout
+
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:backgroundTint="@color/brownbrown"
+            android:foregroundTint="@color/brownbrown">
+
+            <com.google.android.material.appbar.CollapsingToolbarLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                app:contentScrim="?attr/colorPrimary"
+                app:layout_scrollFlags="scroll|enterAlways|enterAlwaysCollapsed"
+
+                app:toolbarId="@+id/toolbar">
+
+
+                <Button
+                    android:id="@+id/back6"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:backgroundTint="@color/brownbrown"
+                    android:text="@string/main_menu"
+                    app:icon="@drawable/ic_baseline_arrow_back_24"
+                    app:iconSize="35dp"
+                    tools:ignore="SpeakableTextPresentCheck,TextContrastCheck" />
+
+                <Button
+                    android:id="@+id/learnmoreButton"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="end"
+                    android:backgroundTint="@color/brownbrown"
+                    android:text="@string/learn_more"
+                    android:textSize="12sp"
+                    app:icon="@drawable/info"
+                    app:iconSize="25dp"
+                    tools:ignore="SpeakableTextPresentCheck,TextContrastCheck" />
+
+                <androidx.appcompat.widget.Toolbar
+                    android:id="@+id/toolbar"
+                    android:layout_width="match_parent"
+                    android:layout_height="?attr/actionBarSize" />
+            </com.google.android.material.appbar.CollapsingToolbarLayout>
+        </com.google.android.material.appbar.AppBarLayout>
+
+        <androidx.core.widget.NestedScrollView
+            android:id="@+id/nestedScrollView4"
+            android:layout_width="match_parent"
+
+
+            android:layout_height="match_parent"
+            android:contentDescription="@string/layout11"
+            app:layout_behavior="com.google.android.material.appbar.AppBarLayout$ScrollingViewBehavior"
+            tools:ignore="SpeakableTextPresentCheck">
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                tools:context=".FacultyDirectory.FacultyActivity">
+
+                <LinearLayout
+                    android:id="@+id/linearLayout2"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:orientation="vertical"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent">
+
+                    <ImageView
+                        android:id="@+id/logo3"
+                        android:layout_width="match_parent"
+                        android:layout_height="63dp"
+                        android:layout_gravity="center_horizontal|center_vertical"
+                        android:layout_marginTop="40dp"
+                        android:contentDescription="@string/logo"
+                        app:srcCompat="@drawable/cropped" />
+
+                    <TextView
+                        android:id="@+id/title1"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center_horizontal"
+                        android:layout_marginTop="10dp"
+                        android:fontFamily="@font/spartan_semibold"
+                        android:gravity="center"
+                        android:text="@string/bsc_in_information_technology"
+                        android:textSize="20sp" />
+
+                    <TextView
+                        android:id="@+id/schedule"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center_horizontal"
+                        android:layout_marginTop="10dp"
+                        android:fontFamily="@font/spartan_semibold"
+                        android:gravity="center"
+                        android:text="@string/schedule_of_classes"
+                        android:textSize="16sp"
+                        android:textStyle="bold" />
+
+                    <TextView
+                        android:id="@+id/septtodec"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center_horizontal"
+                        android:layout_marginTop="10dp"
+                        android:fontFamily="@font/spartan_semibold"
+                        android:gravity="center"
+                        android:text="@string/august_to_december_2022"
+                        android:textSize="16sp"
+                        android:textStyle="bold" />
+
+                    <View
+                        android:id="@+id/divider1"
+                        android:layout_width="match_parent"
+                        android:layout_height="4dp"
+                        android:layout_marginTop="15dp"
+                        android:background="?android:attr/listDivider"
+                        android:backgroundTint="@color/brownbrown"
+                        android:backgroundTintMode="add"
+                        android:foregroundTint="@color/brownbrown"
+                        android:foregroundTintMode="src_in" />
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:orientation="vertical">
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:orientation="vertical">
+
+                            <TextView
+                                android:id="@+id/cycle4"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_gravity="center_horizontal"
+                                android:layout_marginStart="12dp"
+                                android:layout_marginTop="45dp"
+                                android:backgroundTint="@color/paleyellow"
+                                android:backgroundTintMode="add"
+                                android:fontFamily="@font/spartan_semibold"
+                                android:foregroundTint="@color/paleyellow"
+                                android:foregroundTintMode="add"
+                                android:gravity="center|start"
+                                android:text="@string/undergraduate_cycle_4"
+                                android:textColor="@color/brownbrown"
+                                android:textSize="16sp"
+                                android:textStyle="bold"
+                                app:drawableTint="@color/paleyellow"
+                                app:drawableTintMode="add" />
+
+                            <TextView
+                                android:id="@+id/period1"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_gravity="start|center_horizontal"
+                                android:layout_marginStart="18dp"
+                                android:layout_marginTop="10dp"
+                                android:fontFamily="@font/spartan_semibold"
+                                android:gravity="start"
+                                android:text="@string/period_august_15_to_september_17_2022"
+                                android:textSize="16sp"
+                                android:textStyle="bold" />
+
+                            <TextView
+                                android:id="@+id/soci100"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_gravity="start|center_horizontal"
+                                android:layout_marginStart="18dp"
+                                android:layout_marginTop="23dp"
+                                android:fontFamily="@font/spartan_semibold"
+                                android:gravity="center|start"
+                                android:text="@string/course_introduction_to_sociology"
+                                android:textColor="@color/brownbrown"
+                                android:textSize="17sp"
+                                android:textStyle="bold" />
+
+                            <TextView
+                                android:id="@+id/aboutsoci"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_gravity="start|center_horizontal"
+                                android:layout_marginStart="25dp"
+                                android:layout_marginTop="23dp"
+                                android:layout_marginEnd="12dp"
+                                android:fontFamily="@font/spartan_semibold"
+                                android:gravity="start"
+                                android:text="@string/about_this_introductory_course_seeks_to_provide_an_overview_of_sociology_as_a_discipline_it_lays_the_foundation_for_you_to_apply_the_various_theoretical_perspectives_to_contemporary_social_problems_especially_relating_to_the_world_of_work"
+                                android:textColor="@color/material_dynamic_neutral60"
+                                android:textSize="12sp"
+                                android:textStyle="italic"
+                                tools:ignore="TextContrastCheck" />
+
+                            <View
+                                android:id="@+id/divider2"
+                                android:layout_width="match_parent"
+                                android:layout_height="4dp"
+                                android:layout_marginTop="25dp"
+                                android:background="?android:attr/listDivider"
+                                android:backgroundTint="@color/brownbrown"
+                                android:backgroundTintMode="add"
+                                android:foregroundTint="@color/brownbrown"
+                                android:foregroundTintMode="src_in" />
+                        </LinearLayout>
+
+                        <TextView
+                            android:id="@+id/cycle5"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center_horizontal"
+                            android:layout_marginStart="12dp"
+                            android:layout_marginTop="45dp"
+                            android:backgroundTint="@color/paleyellow"
+                            android:backgroundTintMode="add"
+                            android:fontFamily="@font/spartan_semibold"
+                            android:foregroundTint="@color/paleyellow"
+                            android:foregroundTintMode="add"
+                            android:gravity="center|start"
+                            android:text="@string/undergraduate_cycle_5"
+                            android:textColor="@color/brownbrown"
+                            android:textSize="16sp"
+                            android:textStyle="bold"
+                            app:drawableTint="@color/paleyellow"
+                            app:drawableTintMode="add" />
+
+                        <TextView
+                            android:id="@+id/period2"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="start|center_horizontal"
+                            android:layout_marginStart="18dp"
+                            android:layout_marginTop="10dp"
+                            android:fontFamily="@font/spartan_semibold"
+                            android:gravity="center|start"
+                            android:text="@string/period_september_26_to_october_29_2022"
+                            android:textSize="16sp"
+                            android:textStyle="bold" />
+
+                        <TextView
+                            android:id="@+id/mad"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="start"
+                            android:layout_marginStart="18dp"
+                            android:layout_marginTop="23dp"
+                            android:fontFamily="@font/spartan_semibold"
+                            android:gravity="center|start"
+                            android:text="@string/course_mobile_application_development"
+                            android:textColor="@color/royalblue"
+                            android:textSize="17sp"
+                            android:textStyle="bold" />
+
+                        <TextView
+                            android:id="@+id/aboutmad"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="start|center_horizontal"
+                            android:layout_marginStart="25dp"
+                            android:layout_marginTop="23dp"
+                            android:layout_marginEnd="12dp"
+                            android:fontFamily="@font/spartan_semibold"
+                            android:gravity="center|start"
+                            android:text="@string/about_this_course_will_introduce_you_to_the_core_conceptual_skills_and_basic_practices_needed_to_develop_an_android_application_the_course_will_focus_on_how_the_application_communicates_to_retrieve_store_and_interact_with_other_devices_on_any_android_platform_topics_will_include_memory_management_user_interface_design_user_interface_building_input_methods_data_handling_and_network_techniques"
+                            android:textColor="@color/material_dynamic_neutral60"
+                            android:textSize="12sp"
+                            android:textStyle="italic"
+                            tools:ignore="TextContrastCheck" />
+
+                        <View
+                            android:id="@+id/divider3"
+                            android:layout_width="match_parent"
+                            android:layout_height="4dp"
+                            android:layout_marginTop="25dp"
+                            android:background="?android:attr/listDivider"
+                            android:backgroundTint="@color/brownbrown"
+                            android:backgroundTintMode="add"
+                            android:foregroundTint="@color/brownbrown"
+                            android:foregroundTintMode="src_in" />
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:orientation="vertical">
+
+                            <TextView
+                                android:id="@+id/cycle6"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_gravity="center_horizontal"
+                                android:layout_marginStart="12dp"
+                                android:layout_marginTop="45dp"
+                                android:backgroundTint="@color/paleyellow"
+                                android:backgroundTintMode="add"
+                                android:fontFamily="@font/spartan_semibold"
+                                android:foregroundTint="@color/paleyellow"
+                                android:foregroundTintMode="add"
+                                android:gravity="center|start"
+                                android:text="@string/undergraduate_cycle_6"
+                                android:textColor="@color/brownbrown"
+                                android:textSize="16sp"
+                                android:textStyle="bold"
+                                app:drawableTint="@color/paleyellow"
+                                app:drawableTintMode="add" />
+
+                            <TextView
+                                android:id="@+id/period3"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_gravity="start|center_horizontal"
+                                android:layout_marginStart="18dp"
+                                android:layout_marginTop="10dp"
+                                android:fontFamily="@font/spartan_semibold"
+                                android:gravity="start"
+                                android:text="@string/period_november_6_to_december_10_2022"
+                                android:textSize="16sp"
+                                android:textStyle="bold" />
+
+                            <TextView
+                                android:id="@+id/psych101"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_gravity="start|center_horizontal"
+                                android:layout_marginStart="18dp"
+                                android:layout_marginTop="23dp"
+                                android:fontFamily="@font/spartan_semibold"
+                                android:gravity="center|start|center_horizontal"
+                                android:text="@string/course_introduction_to_psychology"
+                                android:textColor="@color/yellowyellow"
+                                android:textSize="17sp"
+                                android:textStyle="bold" />
+
+                            <TextView
+                                android:id="@+id/aboutpsych"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_gravity="start|center_horizontal"
+                                android:layout_marginStart="25dp"
+                                android:layout_marginTop="23dp"
+                                android:layout_marginEnd="12dp"
+                                android:fontFamily="@font/spartan_semibold"
+                                android:gravity="center|start"
+                                android:text="@string/about_this_introductory_course_in_psychology_is_designed_to_give_you_a_basic_understanding_of_human_behaviour_you_will_learn_the_major_psychological_theories_that_will_allow_you_to_explain_and_predict_human_behaviour_the_emphasis_will_be_on_examining_your_behaviour_and_the_behaviour_of_others_within_an_organisational_context"
+                                android:textColor="@color/material_dynamic_neutral60"
+                                android:textSize="12sp"
+                                android:textStyle="italic" />
+
+                            <View
+                                android:id="@+id/divider4"
+                                android:layout_width="match_parent"
+                                android:layout_height="4dp"
+                                android:layout_marginTop="25dp"
+                                android:background="?android:attr/listDivider"
+                                android:backgroundTint="@color/brownbrown"
+                                android:backgroundTintMode="add"
+                                android:foregroundTint="@color/brownbrown"
+                                android:foregroundTintMode="src_in" />
+                        </LinearLayout>
+                    </LinearLayout>
+
+                </LinearLayout>
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+        </androidx.core.widget.NestedScrollView>
+
+
+    </androidx.coordinatorlayout.widget.CoordinatorLayout>
+</androidx.constraintlayout.widget.ConstraintLayout>

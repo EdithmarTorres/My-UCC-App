@@ -1,0 +1,770 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.coordinatorlayout.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+
+
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <com.google.android.material.appbar.AppBarLayout
+
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:backgroundTint="@color/yellowyellow"
+        android:foregroundTint="@color/yellowyellow">
+
+        <com.google.android.material.appbar.CollapsingToolbarLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            app:contentScrim="?attr/colorPrimary"
+            app:layout_scrollFlags="scroll|enterAlways|enterAlwaysCollapsed"
+
+            app:toolbarId="@+id/toolbar">
+
+
+            <Button
+                android:id="@+id/back4"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:backgroundTint="@color/yellowyellow"
+                android:foregroundTint="@color/yellowyellow"
+                android:text="@string/main_menu"
+                app:icon="@drawable/ic_baseline_arrow_back_24"
+                app:iconSize="35dp"
+                tools:ignore="SpeakableTextPresentCheck,TextContrastCheck" />
+
+            <androidx.appcompat.widget.Toolbar
+                android:id="@+id/toolbar"
+                android:layout_width="match_parent"
+                android:layout_height="?attr/actionBarSize" />
+        </com.google.android.material.appbar.CollapsingToolbarLayout>
+    </com.google.android.material.appbar.AppBarLayout>
+
+    <androidx.core.widget.NestedScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+
+
+        app:layout_behavior="com.google.android.material.appbar.AppBarLayout$ScrollingViewBehavior"
+        tools:ignore="SpeakableTextPresentCheck">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            tools:context=".FacultyDirectory.FacultyActivity">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="vertical">
+
+                <ImageView
+                    android:id="@+id/logocourses"
+                    android:layout_width="57dp"
+                    android:layout_height="70dp"
+                    android:layout_gravity="center_horizontal"
+                    android:layout_marginTop="40dp"
+                    android:contentDescription="@string/misc"
+                    app:srcCompat="@drawable/cropped" />
+
+                <TextView
+                    android:id="@+id/titleView"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="10dp"
+                    android:fontFamily="@font/spartan_semibold"
+                    android:gravity="center_horizontal"
+                    android:text="@string/ucc_faculty_staff"
+                    android:textColor="@color/black"
+                    android:textSize="28sp" />
+
+                <TextView
+                    android:id="@+id/adReqview"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="12dp"
+                    android:layout_marginTop="10dp"
+                    android:fontFamily="@font/spartan_semibold"
+                    android:gravity="center_horizontal"
+                    android:text="@string/contact_information"
+                    android:textColor="@color/brownbrown"
+                    android:textSize="23sp"
+                    tools:ignore="TextContrastCheck" />
+
+                <View
+                    android:id="@+id/divider1"
+                    android:layout_width="match_parent"
+                    android:layout_height="6dp"
+                    android:layout_marginTop="10dp"
+                    android:background="?android:attr/listDivider"
+                    android:backgroundTint="@color/royalblue"
+                    android:backgroundTintMode="src_over"
+                    android:foregroundTint="@color/lilac"
+                    android:foregroundTintMode="src_in" />
+
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent">
+
+                    <TableLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintStart_toStartOf="parent">
+
+                        <TableRow
+                            android:id="@+id/picsRow"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:layout_marginTop="45dp">
+
+                            <ImageView
+                                android:id="@+id/soniapic"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginStart="20dp"
+                                android:contentDescription="@string/soniapic"
+                                app:srcCompat="@drawable/sonia_davidson" />
+
+                            <ImageView
+                                android:id="@+id/tompic"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginStart="45dp"
+                                android:contentDescription="@string/tompic"
+                                app:srcCompat="@drawable/tom_amonde" />
+                        </TableRow>
+
+                        <TableRow
+                            android:id="@+id/namesRow"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent">
+
+                            <TextView
+                                android:id="@+id/soniaName"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_gravity="center"
+                                android:layout_marginStart="5dp"
+                                android:layout_marginTop="8dp"
+                                android:backgroundTintMode="add"
+                                android:fontFamily="@font/spartan_semibold"
+                                android:text="@string/mrs_sonia_davidson"
+                                android:textSize="12sp" />
+
+                            <TextView
+                                android:id="@+id/tomName"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_gravity="center"
+                                android:layout_marginStart="20dp"
+                                android:layout_marginTop="8dp"
+                                android:fontFamily="@font/spartan_semibold"
+                                android:text="@string/dr_tom_amonde"
+                                android:textSize="12sp" />
+
+                        </TableRow>
+
+                        <TableRow
+                            android:id="@+id/titleRow"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent">
+
+                            <TextView
+                                android:id="@+id/soniatitle"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_gravity="center"
+                                android:layout_marginStart="5dp"
+                                android:layout_marginTop="5dp"
+                                android:fontFamily="@font/spartan_medium"
+                                android:text="@string/hod_business_administration"
+                                android:textSize="11sp" />
+
+                            <TextView
+                                android:id="@+id/tomtitle"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_gravity="center"
+                                android:layout_marginStart="10dp"
+                                android:layout_marginTop="5dp"
+                                android:fontFamily="@font/spartan_medium"
+                                android:foregroundGravity="center"
+                                android:gravity="center"
+                                android:text="@string/hod_graduate_studies_research"
+                                android:textSize="10sp"
+                                tools:ignore="SmallSp" />
+                        </TableRow>
+
+                        <TableRow
+                            android:id="@+id/phoneRow"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent">
+
+                            <TextView
+                                android:id="@+id/soniaphone"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_gravity="center"
+                                android:layout_marginStart="5dp"
+                                android:layout_marginTop="5dp"
+                                android:fontFamily="@font/spartan_semibold"
+                                android:text="@string/_876_906_3000_ext_4044"
+                                android:textSize="11sp" />
+
+                            <TextView
+                                android:id="@+id/tomphone"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_gravity="center"
+                                android:layout_marginStart="18dp"
+                                android:layout_marginTop="5dp"
+                                android:layout_marginEnd="10dp"
+                                android:fontFamily="@font/spartan_semibold"
+                                android:gravity="center"
+                                android:text="@string/_876_906_3000_ext_4091"
+                                android:textSize="11sp" />
+                        </TableRow>
+
+                        <TableRow
+                            android:id="@+id/emailRow"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent">
+
+                            <TextView
+                                android:id="@+id/emailSonia"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_gravity="center"
+                                android:layout_marginStart="5dp"
+                                android:layout_marginTop="5dp"
+                                android:fontFamily="@font/spartan_medium"
+                                android:text="@string/soniaemail"
+                                android:textSize="8sp"
+                                android:textStyle="bold"
+                                tools:ignore="SmallSp" />
+
+                            <TextView
+                                android:id="@+id/emailTom"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_gravity="center"
+                                android:layout_marginStart="12dp"
+                                android:layout_marginTop="5dp"
+                                android:fontFamily="@font/spartan_semibold"
+                                android:foregroundGravity="center"
+                                android:gravity="center"
+                                android:text="@string/graduateEmail"
+                                android:textSize="9sp"
+                                tools:ignore="SmallSp" />
+                        </TableRow>
+
+                        <TableRow
+                            android:id="@+id/buttonRows"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent">
+
+                            <TableRow
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent">
+
+                                <ImageButton
+                                    android:id="@+id/callSoniaButton"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_marginStart="40dp"
+                                    android:layout_marginTop="10dp"
+                                    android:backgroundTint="@color/yellowyellow"
+                                    android:contentDescription="@string/callbtn1"
+                                    android:minHeight="48dp"
+                                    app:srcCompat="@drawable/ic_baseline_call_24"
+                                    tools:ignore="ImageContrastCheck,SpeakableTextPresentCheck,DuplicateSpeakableTextCheck" />
+
+                                <ImageButton
+                                    android:id="@+id/emailSoniaButton"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_marginStart="10dp"
+                                    android:layout_marginTop="10dp"
+                                    android:backgroundTint="@color/yellowyellow"
+                                    android:contentDescription="@string/embtn1"
+                                    android:minHeight="48dp"
+                                    app:srcCompat="@drawable/ic_baseline_email_24"
+                                    tools:ignore="ImageContrastCheck,DuplicateSpeakableTextCheck" />
+
+                            </TableRow>
+
+                            <TableRow
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent">
+
+                                <ImageButton
+                                    android:id="@+id/callTomButton"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_marginStart="60dp"
+                                    android:layout_marginTop="10dp"
+                                    android:backgroundTint="@color/yellowyellow"
+                                    android:contentDescription="@string/callbtn2"
+                                    android:minHeight="48dp"
+                                    app:srcCompat="@drawable/ic_baseline_call_24"
+                                    tools:ignore="SpeakableTextPresentCheck,ImageContrastCheck" />
+
+                                <ImageButton
+                                    android:id="@+id/emailTomButton"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_marginStart="10dp"
+                                    android:layout_marginTop="10dp"
+                                    android:backgroundTint="@color/yellowyellow"
+                                    android:contentDescription="@string/em1"
+                                    android:minHeight="48dp"
+                                    app:srcCompat="@drawable/ic_baseline_email_24"
+                                    tools:ignore="ImageContrastCheck,SpeakableTextPresentCheck" />
+
+                            </TableRow>
+
+                        </TableRow>
+
+                        <TableRow
+                            android:id="@+id/picRow2"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:layout_marginTop="35dp">
+
+                            <ImageView
+                                android:id="@+id/imageView6"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginStart="20dp"
+                                android:contentDescription="@string/misc2"
+                                app:srcCompat="@drawable/ionie_miller"
+                                tools:ignore="ImageContrastCheck" />
+
+                            <ImageView
+                                android:id="@+id/imageView7"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginStart="45dp"
+                                android:contentDescription="@string/misc4"
+                                app:srcCompat="@drawable/it_hod"
+                                tools:ignore="ImageContrastCheck" />
+
+                        </TableRow>
+
+                        <TableRow
+                            android:id="@+id/nameRow2"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent">
+
+                            <TextView
+                                android:id="@+id/ionieName"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_gravity="center"
+                                android:layout_marginStart="5dp"
+                                android:layout_marginTop="8dp"
+                                android:backgroundTintMode="add"
+                                android:fontFamily="@font/spartan_semibold"
+                                android:text="@string/mrs_ionie_miller"
+                                android:textSize="12sp" />
+
+                            <TextView
+                                android:id="@+id/natalieName"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_gravity="center"
+                                android:layout_marginStart="20dp"
+                                android:layout_marginTop="8dp"
+                                android:fontFamily="@font/spartan_semibold"
+                                android:foregroundGravity="center"
+                                android:gravity="center"
+                                android:text="@string/ms_natalie_rose"
+                                android:textSize="12sp" />
+                        </TableRow>
+
+                        <TableRow
+                            android:id="@+id/titleRow2"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent">
+
+                            <TextView
+                                android:id="@+id/ionieTitle"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_gravity="center"
+                                android:layout_marginStart="5dp"
+                                android:layout_marginTop="5dp"
+                                android:fontFamily="@font/spartan_medium"
+                                android:text="@string/hod_general_amp_behavioural_science"
+                                android:textSize="9sp"
+                                tools:ignore="SmallSp" />
+
+                            <TextView
+                                android:id="@+id/tomtitle3"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_gravity="center"
+                                android:layout_marginStart="10dp"
+                                android:layout_marginTop="5dp"
+                                android:fontFamily="@font/spartan_medium"
+                                android:foregroundGravity="center"
+                                android:gravity="center"
+                                android:text="@string/hod_information_technology"
+                                android:textSize="11sp" />
+                        </TableRow>
+
+                        <TableRow
+                            android:id="@+id/phoneRow2"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent">
+
+                            <TextView
+                                android:id="@+id/ioniePhone"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_gravity="center"
+                                android:layout_marginStart="5dp"
+                                android:layout_marginTop="5dp"
+                                android:fontFamily="@font/spartan_semibold"
+                                android:text="@string/_876_906_3000_ext_4019"
+                                android:textSize="11sp" />
+
+                            <TextView
+                                android:id="@+id/nataliePhone"
+                                android:layout_width="wrap_content"
+                                android:layout_height="21dp"
+                                android:layout_gravity="center"
+                                android:layout_marginStart="18dp"
+                                android:layout_marginTop="5dp"
+                                android:layout_marginEnd="10dp"
+                                android:fontFamily="@font/spartan_semibold"
+                                android:foregroundGravity="center"
+                                android:gravity="center"
+                                android:text="@string/_876_906_3000_ext_4046"
+                                android:textSize="11sp" />
+                        </TableRow>
+
+                        <TableRow
+                            android:id="@+id/emailRow2"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent">
+
+                            <TextView
+                                android:id="@+id/emailIonie"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_gravity="center"
+                                android:layout_marginStart="5dp"
+                                android:layout_marginTop="5dp"
+                                android:fontFamily="@font/spartan_medium"
+                                android:text="@string/appliedpsychologyfaculty_ucc_edu_jm"
+                                android:textSize="8sp"
+                                android:textStyle="bold"
+                                tools:ignore="SmallSp" />
+
+                            <TextView
+                                android:id="@+id/emailNatalie"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_gravity="center"
+                                android:layout_marginStart="12dp"
+                                android:layout_marginTop="5dp"
+                                android:fontFamily="@font/spartan_semibold"
+                                android:text="@string/ithod_ucc_edu_jm"
+                                android:textSize="9sp"
+                                tools:ignore="SmallSp" />
+                        </TableRow>
+
+                        <TableRow
+                            android:id="@+id/buttonRows2"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent">
+
+                            <TableRow
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent">
+
+                                <ImageButton
+                                    android:id="@+id/callIonieButton"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_marginStart="40dp"
+                                    android:layout_marginTop="10dp"
+                                    android:backgroundTint="@color/yellowyellow"
+                                    android:contentDescription="@string/callbtn1"
+                                    android:minHeight="48dp"
+                                    app:srcCompat="@drawable/ic_baseline_call_24"
+                                    tools:ignore="ImageContrastCheck,SpeakableTextPresentCheck,DuplicateSpeakableTextCheck" />
+
+                                <ImageButton
+                                    android:id="@+id/emailIonieButton"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_marginStart="10dp"
+                                    android:layout_marginTop="10dp"
+                                    android:backgroundTint="@color/yellowyellow"
+                                    android:contentDescription="@string/embtn1"
+                                    android:minHeight="48dp"
+                                    app:srcCompat="@drawable/ic_baseline_email_24"
+                                    tools:ignore="ImageContrastCheck,DuplicateSpeakableTextCheck" />
+
+                            </TableRow>
+
+                            <TableRow
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent">
+
+                                <ImageButton
+                                    android:id="@+id/callNatalieButton"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_marginStart="60dp"
+                                    android:layout_marginTop="10dp"
+                                    android:backgroundTint="@color/yellowyellow"
+                                    android:contentDescription="@string/callbtn2"
+                                    android:minHeight="48dp"
+                                    app:srcCompat="@drawable/ic_baseline_call_24"
+                                    tools:ignore="SpeakableTextPresentCheck,ImageContrastCheck" />
+
+                                <ImageButton
+                                    android:id="@+id/emailNatalieButton"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_marginStart="10dp"
+                                    android:layout_marginTop="10dp"
+                                    android:backgroundTint="@color/yellowyellow"
+                                    android:contentDescription="@string/em1"
+                                    android:minHeight="48dp"
+                                    app:srcCompat="@drawable/ic_baseline_email_24"
+                                    tools:ignore="ImageContrastCheck,SpeakableTextPresentCheck" />
+
+                            </TableRow>
+
+                        </TableRow>
+
+                        <TableRow
+                            android:id="@+id/picRow3"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:layout_marginTop="20dp">
+
+                            <ImageView
+                                android:id="@+id/peterPic"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginStart="20dp"
+                                android:contentDescription="@string/misc5"
+                                app:srcCompat="@drawable/peter_ndajah"
+                                tools:ignore="ContentDescription" />
+
+                            <ImageView
+                                android:id="@+id/collettePic"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginStart="45dp"
+                                android:contentDescription="@string/misc6"
+                                app:srcCompat="@drawable/collette_smith" />
+                        </TableRow>
+
+                        <TableRow
+                            android:id="@+id/namesRow3"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent">
+
+                            <TextView
+                                android:id="@+id/peterName"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_gravity="center"
+                                android:layout_marginStart="5dp"
+                                android:layout_marginTop="8dp"
+                                android:backgroundTintMode="add"
+                                android:fontFamily="@font/spartan_semibold"
+                                android:text="@string/dr_peter_ndajah"
+                                android:textSize="12sp" />
+
+                            <TextView
+                                android:id="@+id/colletteName"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_gravity="center"
+                                android:layout_marginStart="20dp"
+                                android:layout_marginTop="8dp"
+                                android:fontFamily="@font/spartan_semibold"
+                                android:text="@string/dr_collette_smith"
+                                android:textSize="12sp" />
+
+                        </TableRow>
+
+                        <TableRow
+                            android:id="@+id/titleRow3"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent">
+
+                            <TextView
+                                android:id="@+id/peterTitle"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_gravity="center"
+                                android:layout_marginStart="5dp"
+                                android:layout_marginTop="5dp"
+                                android:fontFamily="@font/spartan_medium"
+                                android:text="@string/hod_mathematics"
+                                android:textSize="11sp" />
+
+                            <TextView
+                                android:id="@+id/colletteTitle"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_gravity="center"
+                                android:layout_marginStart="15dp"
+                                android:layout_marginTop="5dp"
+                                android:fontFamily="@font/spartan_medium"
+                                android:foregroundGravity="center"
+                                android:gravity="center"
+                                android:text="@string/hod_tourism_amp_hospitality"
+                                android:textSize="11sp" />
+
+                        </TableRow>
+
+                        <TableRow
+                            android:id="@+id/phoneRow3"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent">
+
+                            <TextView
+                                android:id="@+id/peterPhone"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_gravity="center"
+                                android:layout_marginStart="5dp"
+                                android:layout_marginTop="5dp"
+                                android:fontFamily="@font/spartan_semibold"
+                                android:text="@string/_876_906_3000"
+                                android:textSize="11sp" />
+
+                            <TextView
+                                android:id="@+id/colletePhone"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_gravity="center"
+                                android:layout_marginStart="18dp"
+                                android:layout_marginTop="5dp"
+                                android:layout_marginEnd="10dp"
+                                android:fontFamily="@font/spartan_semibold"
+                                android:foregroundGravity="center"
+                                android:gravity="center"
+                                android:text="@string/_876_906_3000_ext_4117"
+                                android:textSize="11sp" />
+                        </TableRow>
+
+                        <TableRow
+                            android:id="@+id/emailRow3"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent">
+
+                            <TextView
+                                android:id="@+id/emailPeter"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_gravity="center"
+                                android:layout_marginStart="5dp"
+                                android:layout_marginTop="5dp"
+                                android:fontFamily="@font/spartan_medium"
+                                android:text="@string/headofschoolsmathit_ucc_edu_jm"
+                                android:textSize="9sp"
+                                android:textStyle="bold"
+                                tools:ignore="SmallSp" />
+
+                            <TextView
+                                android:id="@+id/emailCollette"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_gravity="center"
+                                android:layout_marginStart="12dp"
+                                android:layout_marginTop="5dp"
+                                android:fontFamily="@font/spartan_semibold"
+                                android:text="@string/hodtourism_ucc_edu_jm"
+                                android:textSize="11sp" />
+                        </TableRow>
+
+                        <TableRow
+                            android:id="@+id/buttonRows3"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent">
+
+                            <TableRow
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent">
+
+                                <ImageButton
+                                    android:id="@+id/callPeterButton"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_marginStart="40dp"
+                                    android:layout_marginTop="10dp"
+                                    android:backgroundTint="@color/yellowyellow"
+                                    android:contentDescription="@string/callbtn1"
+                                    android:minHeight="48dp"
+                                    app:srcCompat="@drawable/ic_baseline_call_24"
+                                    tools:ignore="ImageContrastCheck,SpeakableTextPresentCheck,DuplicateSpeakableTextCheck" />
+
+                                <ImageButton
+                                    android:id="@+id/emailPeterButton"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_marginStart="10dp"
+                                    android:layout_marginTop="10dp"
+                                    android:backgroundTint="@color/yellowyellow"
+                                    android:contentDescription="@string/embtn1"
+                                    android:minHeight="48dp"
+                                    app:srcCompat="@drawable/ic_baseline_email_24"
+                                    tools:ignore="ImageContrastCheck,DuplicateSpeakableTextCheck" />
+
+                            </TableRow>
+
+                            <TableRow
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent">
+
+                                <ImageButton
+                                    android:id="@+id/callColletteButton"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_marginStart="60dp"
+                                    android:layout_marginTop="10dp"
+                                    android:backgroundTint="@color/yellowyellow"
+                                    android:contentDescription="@string/callbtn2"
+                                    android:minHeight="48dp"
+                                    app:srcCompat="@drawable/ic_baseline_call_24"
+                                    tools:ignore="SpeakableTextPresentCheck,ImageContrastCheck" />
+
+                                <ImageButton
+                                    android:id="@+id/emailColletteButton"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_marginStart="10dp"
+                                    android:layout_marginTop="10dp"
+                                    android:backgroundTint="@color/yellowyellow"
+                                    android:contentDescription="@string/em1"
+                                    android:minHeight="48dp"
+                                    app:srcCompat="@drawable/ic_baseline_email_24"
+                                    tools:ignore="ImageContrastCheck,SpeakableTextPresentCheck,TooManyViews" />
+
+                            </TableRow>
+
+                        </TableRow>
+
+                    </TableLayout>
+
+                </androidx.constraintlayout.widget.ConstraintLayout>
+            </LinearLayout>
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+    </androidx.core.widget.NestedScrollView>
+
+
+</androidx.coordinatorlayout.widget.CoordinatorLayout>

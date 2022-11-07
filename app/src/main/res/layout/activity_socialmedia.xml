@@ -1,0 +1,190 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <androidx.coordinatorlayout.widget.CoordinatorLayout
+
+
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <com.google.android.material.appbar.AppBarLayout
+
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:backgroundTint="@color/paleyellow"
+            android:foregroundTint="@color/paleyellow">
+
+            <com.google.android.material.appbar.CollapsingToolbarLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                app:contentScrim="?attr/colorPrimary"
+                app:layout_scrollFlags="scroll|enterAlways|enterAlwaysCollapsed"
+
+                app:toolbarId="@+id/toolbar">
+
+
+                <Button
+                    android:id="@+id/back5"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:backgroundTint="@color/paleyellow"
+                    android:text="@string/main_menu"
+                    app:icon="@drawable/ic_baseline_arrow_back_24"
+                    app:iconSize="35dp"
+                    tools:ignore="SpeakableTextPresentCheck,TextContrastCheck" />
+
+                <androidx.appcompat.widget.Toolbar
+                    android:id="@+id/toolbar"
+                    android:layout_width="match_parent"
+                    android:layout_height="?attr/actionBarSize" />
+            </com.google.android.material.appbar.CollapsingToolbarLayout>
+        </com.google.android.material.appbar.AppBarLayout>
+
+        <androidx.core.widget.NestedScrollView
+            android:id="@+id/nestedScrollView2"
+            android:layout_width="match_parent"
+
+
+            android:layout_height="match_parent"
+            android:contentDescription="@string/layout11"
+            app:layout_behavior="com.google.android.material.appbar.AppBarLayout$ScrollingViewBehavior"
+            tools:ignore="SpeakableTextPresentCheck">
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_gravity="center_horizontal"
+                android:foregroundGravity="center_vertical"
+                tools:context=".FacultyDirectory.FacultyActivity">
+
+                <LinearLayout
+                    android:id="@+id/linearLayout2"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:orientation="vertical"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent">
+
+                    <ImageView
+                        android:id="@+id/logo3"
+                        android:layout_width="match_parent"
+                        android:layout_height="63dp"
+                        android:layout_gravity="center_horizontal|center_vertical"
+                        android:layout_marginTop="40dp"
+                        android:contentDescription="@string/logo"
+                        app:srcCompat="@drawable/cropped" />
+
+                    <TextView
+                        android:id="@+id/title1"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center_horizontal"
+                        android:layout_marginTop="18dp"
+                        android:fontFamily="@font/spartan_semibold"
+                        android:gravity="center"
+                        android:text="@string/visit_the_ucc_s_social_media"
+                        android:textSize="20sp" />
+
+                    <TextView
+                        android:id="@+id/schedule"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center_horizontal"
+                        android:layout_marginTop="16dp"
+                        android:fontFamily="@font/spartan_semibold"
+                        android:gravity="center"
+                        android:text="@string/click_on_the_buttons_below"
+                        android:textSize="16sp"
+                        android:textStyle="italic" />
+
+                    <View
+                        android:id="@+id/divider1"
+                        android:layout_width="match_parent"
+                        android:layout_height="4dp"
+                        android:layout_marginTop="30dp"
+                        android:background="?android:attr/listDivider"
+                        android:backgroundTint="@color/paleyellow"
+                        android:backgroundTintMode="add"
+                        android:foregroundTint="@color/paleyellow"
+                        android:foregroundTintMode="src_in" />
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/linearLayout"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_marginTop="250dp"
+                    android:foregroundGravity="center"
+                    android:gravity="center_horizontal"
+                    android:orientation="vertical"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent">
+
+                    <Button
+                        android:id="@+id/facebookButon"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_margin="10dp"
+                        android:layout_marginBottom="10dp"
+                        android:text="@string/visit_ucc_s_facebook_page"
+                        android:textSize="16sp"
+                        android:textStyle="bold"
+                        app:icon="@drawable/facebook"
+                        app:iconSize="65dp" />
+
+                    <Button
+                        android:id="@+id/twitterButton"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_margin="10dp"
+                        android:backgroundTint="@color/material_dynamic_primary70"
+                        android:text="@string/visit_ucc_s_twitter_page"
+                        android:textSize="16sp"
+                        android:textStyle="bold"
+                        app:icon="@drawable/twitter"
+                        app:iconSize="65dp"
+                        tools:ignore="TextContrastCheck" />
+
+                    <Button
+                        android:id="@+id/instagramButton"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_gravity="center_horizontal"
+                        android:layout_margin="10dp"
+                        android:backgroundTint="@color/instacolor"
+                        android:text="@string/visit_ucc_s_instagram_page"
+                        android:textSize="16sp"
+                        android:textStyle="bold"
+                        app:icon="@drawable/insta"
+                        app:iconSize="65dp" />
+
+                    <Button
+                        android:id="@+id/websiteButton"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_margin="10dp"
+                        android:backgroundTint="@color/yellowyellow"
+                        android:text="@string/visit_the_ucc_s_website"
+                        android:textColor="@color/white"
+                        android:textSize="16sp"
+                        android:textStyle="bold"
+                        app:icon="@drawable/globe"
+                        app:iconSize="65dp"
+                        tools:ignore="TextContrastCheck" />
+
+                </LinearLayout>
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+        </androidx.core.widget.NestedScrollView>
+
+
+    </androidx.coordinatorlayout.widget.CoordinatorLayout>
+</androidx.constraintlayout.widget.ConstraintLayout>

@@ -1,0 +1,40 @@
+{
+  "project_info": {
+    "project_number": "609134514003",
+    "firebase_url": "https://courses-database-9b321-default-rtdb.firebaseio.com",
+    "project_id": "courses-database-9b321",
+    "storage_bucket": "courses-database-9b321.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:609134514003:android:a3682fbe913f52111d1ba6",
+        "android_client_info": {
+          "package_name": "com.example.myuccapp"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "609134514003-7eauipp7cvdk38ur3qoqpfi0riqat1sq.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAYUM0nmEuqvPSbtKKX3Tvi0twI-lOLa3I"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "609134514003-7eauipp7cvdk38ur3qoqpfi0riqat1sq.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

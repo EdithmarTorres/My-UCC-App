@@ -1,0 +1,256 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".Admissions.AdmissionActivity">
+
+    <androidx.coordinatorlayout.widget.CoordinatorLayout
+
+
+        android:id="@+id/coordinatorLayout"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <com.google.android.material.appbar.AppBarLayout
+
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:backgroundTint="@color/lilac"
+            android:foregroundTint="@color/lilac">
+
+            <com.google.android.material.appbar.CollapsingToolbarLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                app:contentScrim="?attr/colorPrimary"
+                app:layout_scrollFlags="scroll|enterAlways|enterAlwaysCollapsed"
+
+                app:toolbarId="@+id/toolbar">
+
+
+                <androidx.appcompat.widget.Toolbar
+                    android:id="@+id/toolbar"
+                    android:layout_width="match_parent"
+                    android:layout_height="?attr/actionBarSize" />
+
+                <Button
+                    android:id="@+id/back1"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:backgroundTint="@color/lilac"
+                    android:text="@string/main_menu"
+                    app:icon="@drawable/ic_baseline_arrow_back_24"
+                    app:iconSize="35dp"
+                    tools:ignore="SpeakableTextPresentCheck,TextContrastCheck" />
+
+                <Button
+                    android:id="@+id/infoButton"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="end"
+                    android:backgroundTint="@color/lilac"
+                    android:text="@string/info"
+                    app:icon="@drawable/info"
+                    app:iconSize="35dp"
+                    tools:ignore="SpeakableTextPresentCheck,TextContrastCheck" />
+
+            </com.google.android.material.appbar.CollapsingToolbarLayout>
+        </com.google.android.material.appbar.AppBarLayout>
+
+        <androidx.core.widget.NestedScrollView
+            android:id="@+id/nestedScrollView3"
+            android:layout_width="match_parent"
+
+
+            android:layout_height="1325dp"
+            android:contentDescription="@string/layout1"
+            app:layout_behavior="com.google.android.material.appbar.AppBarLayout$ScrollingViewBehavior"
+            tools:ignore="SpeakableTextPresentCheck,SpeakableTextPresentCheck">
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                tools:context=".FacultyDirectory.FacultyActivity">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:orientation="vertical"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:orientation="vertical"
+                        tools:ignore="UselessParent">
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:orientation="vertical">
+
+                            <ImageView
+                                android:id="@+id/logocourses"
+                                android:layout_width="57dp"
+                                android:layout_height="70dp"
+                                android:layout_gravity="center_horizontal"
+                                android:layout_marginTop="40dp"
+                                android:contentDescription="@string/misc"
+                                app:srcCompat="@drawable/cropped" />
+
+                            <TextView
+                                android:id="@+id/titleView"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_marginTop="10dp"
+                                android:fontFamily="@font/spartan_semibold"
+                                android:gravity="center_horizontal"
+                                android:text="@string/info_tech_department"
+                                android:textColor="@color/black"
+                                android:textSize="28sp" />
+
+                            <TextView
+                                android:id="@+id/adReqview"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_marginStart="12dp"
+                                android:layout_marginTop="10dp"
+                                android:fontFamily="@font/spartan_semibold"
+                                android:gravity="center_horizontal"
+                                android:text="@string/admission_requirements"
+                                android:textColor="#7986CB"
+                                android:textSize="23sp"
+                                tools:ignore="TextContrastCheck" />
+
+                            <View
+                                android:id="@+id/divider1"
+                                android:layout_width="match_parent"
+                                android:layout_height="6dp"
+                                android:layout_marginTop="10dp"
+                                android:background="?android:attr/listDivider"
+                                android:backgroundTint="@color/lilac"
+                                android:backgroundTintMode="src_over"
+                                android:foregroundTint="@color/lilac"
+                                android:foregroundTintMode="src_in" />
+
+                            <androidx.constraintlayout.widget.ConstraintLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent">
+
+                            </androidx.constraintlayout.widget.ConstraintLayout>
+                        </LinearLayout>
+
+                        <TextView
+                            android:id="@+id/bsctitle"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginStart="15dp"
+                            android:layout_marginTop="50dp"
+                            android:fontFamily="@font/spartan_medium"
+                            android:gravity="start|center_horizontal"
+                            android:text="@string/bachelor_s_degree_in_information_technology"
+                            android:textColor="@color/black"
+                            android:textSize="16sp"
+                            android:textStyle="bold" />
+
+                        <TextView
+                            android:id="@+id/entryView"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginStart="15dp"
+                            android:layout_marginTop="20dp"
+                            android:fontFamily="@font/spartan_medium"
+                            android:gravity="start|center_horizontal"
+                            android:text="@string/entry_requirements"
+                            android:textColor="@color/black"
+                            android:textSize="16sp" />
+
+                        <androidx.constraintlayout.widget.ConstraintLayout
+                            android:id="@+id/constraintLayout2"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent">
+
+                            <TextView
+                                android:id="@+id/admissionRequirements"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:fontFamily="@font/spartan_medium"
+                                android:lineSpacingExtra="8sp"
+                                android:padding="15dp"
+                                android:text="@string/secondary_high_school_diploma_ged_or_certificate_of_equivalency_proficiency_or_passes_in_5_gce_o_level_csec_passes_at_a_b_or_c_i_ii_or_iii_including_mathematics_and_english_or_international_baccalaureate_ib_or_equivalent_subject_to_ucc_global_s_approval_students_who_have_successfully_completed_undergraduate_program_credits_may_be_eligible_to_transfer_up_to_60_of_those_credits_to_the_ucc_global_program_final_determination_on_the_eligibility_of_the_transfer_of_credits_will_be_made_once_your_application_and_transcript_s_are_received_reviewed_and_approved_by_ucc_global"
+                                android:textColor="@color/material_dynamic_neutral30"
+                                android:textStyle="italic"
+                                app:layout_constraintBottom_toBottomOf="parent"
+                                app:layout_constraintEnd_toEndOf="parent"
+                                app:layout_constraintHorizontal_bias="0.0"
+                                app:layout_constraintStart_toStartOf="parent"
+                                app:layout_constraintTop_toTopOf="parent"
+                                app:layout_constraintVertical_bias="0.0" />
+
+                            <androidx.constraintlayout.widget.ConstraintLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="1359dp"
+                                app:layout_constraintBottom_toBottomOf="parent"
+                                app:layout_constraintEnd_toEndOf="parent"
+                                app:layout_constraintHorizontal_bias="0.0"
+                                app:layout_constraintStart_toStartOf="parent"
+                                app:layout_constraintTop_toTopOf="parent"
+                                app:layout_constraintVertical_bias="0.0">
+
+                                <Button
+                                    android:id="@+id/applyButton"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:layout_marginTop="55dp"
+                                    android:layout_marginBottom="637dp"
+                                    android:backgroundTint="@color/brownbrown"
+                                    android:text="@string/apply_here"
+                                    android:textAllCaps="true"
+                                    android:textSize="20sp"
+                                    android:textStyle="italic"
+                                    app:icon="@drawable/ic_baseline_touch_app_24"
+                                    app:iconGravity="textEnd"
+                                    app:iconSize="30dp"
+                                    app:layout_constraintBottom_toBottomOf="parent"
+                                    app:layout_constraintEnd_toEndOf="parent"
+                                    app:layout_constraintStart_toStartOf="parent"
+                                    app:layout_constraintTop_toBottomOf="@+id/englishRequirements"
+                                    tools:ignore="SpeakableTextPresentCheck,TextContrastCheck" />
+
+                                <TextView
+                                    android:id="@+id/englishRequirements"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_marginTop="375dp"
+                                    android:fontFamily="@font/spartan_medium"
+                                    android:lineSpacingExtra="8sp"
+                                    android:padding="15dp"
+                                    android:text="@string/english_language_requirements_the_language_of_instruction_at_ucc_global_is_english_applicants_whose_most_recent_education_was_not_in_english_will_be_required_to_demonstrate_english_language_proficiency_through_the_completion_of_an_approved_english_testing_regime_such_as_the_test_of_english_as_a_foreign_language_toefl_both_toefl_paper_based_pbt_and_toefl_internet_based_ibt_will_be_accepted"
+                                    android:textColor="@color/material_dynamic_neutral30"
+                                    android:textStyle="italic"
+                                    app:layout_constraintBottom_toBottomOf="parent"
+                                    app:layout_constraintEnd_toEndOf="parent"
+                                    app:layout_constraintStart_toStartOf="parent"
+                                    app:layout_constraintTop_toTopOf="parent"
+                                    app:layout_constraintVertical_bias="0.0" />
+
+                            </androidx.constraintlayout.widget.ConstraintLayout>
+
+                        </androidx.constraintlayout.widget.ConstraintLayout>
+
+                    </LinearLayout>
+
+                </LinearLayout>
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+        </androidx.core.widget.NestedScrollView>
+
+
+    </androidx.coordinatorlayout.widget.CoordinatorLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

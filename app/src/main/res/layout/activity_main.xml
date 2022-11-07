@@ -1,0 +1,254 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.coordinatorlayout.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <com.google.android.material.appbar.AppBarLayout
+        android:id="@+id/appbar"
+
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:backgroundTint="@color/royalblue"
+        android:foregroundTint="@color/royalblue">
+
+        <com.google.android.material.appbar.CollapsingToolbarLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:contentScrim="?attr/colorPrimary"
+            app:layout_scrollFlags="scroll|enterAlways|enterAlwaysCollapsed"
+
+            app:toolbarId="@+id/toolbar">
+
+
+            <androidx.appcompat.widget.Toolbar
+                android:id="@+id/toolbar"
+                android:layout_width="match_parent"
+                android:layout_height="?attr/actionBarSize" />
+
+            <ImageView
+                android:id="@+id/imageView"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="20dp"
+                app:srcCompat="@drawable/ic_baseline_home_24"
+                android:contentDescription="@string/home" />
+
+        </com.google.android.material.appbar.CollapsingToolbarLayout>
+    </com.google.android.material.appbar.AppBarLayout>
+
+    <androidx.core.widget.NestedScrollView
+        android:id="@+id/nestedScrollView"
+        android:layout_width="match_parent"
+
+
+        android:layout_height="match_parent"
+        app:layout_behavior="com.google.android.material.appbar.AppBarLayout$ScrollingViewBehavior">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            tools:context=".MainActivity.MainActivity">
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:id="@+id/constraintLayout"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:orientation="vertical"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent">
+
+                    <ImageView
+                        android:id="@+id/imageView2"
+                        android:layout_width="95dp"
+                        android:layout_height="63dp"
+                        android:layout_gravity="center_horizontal|center_vertical"
+                        android:layout_marginTop="40dp"
+                        android:contentDescription="@string/logo"
+                        app:srcCompat="@drawable/cropped" />
+
+                    <TextView
+                        android:id="@+id/welcometxt"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center|center_horizontal"
+                        android:layout_marginTop="30dp"
+                        android:fontFamily="@font/spartan_semibold"
+                        android:foregroundGravity="center"
+                        android:gravity="center_horizontal|center_vertical"
+                        android:text="@string/welcome_to_the_myuccapp_main_menu"
+                        android:textStyle="bold" />
+                </LinearLayout>
+
+                <TableLayout
+                    android:id="@+id/tableLayout2"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent">
+
+                    <TableRow
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent">
+
+                        <Button
+                            android:id="@+id/directoryButton"
+                            style="?android:attr/buttonBarButtonStyle"
+                            android:layout_width="190dp"
+                            android:layout_height="170dp"
+                            android:layout_marginLeft="6dp"
+                            android:layout_marginTop="200dp"
+                            android:layout_marginRight="6dp"
+                            android:layout_marginBottom="6dp"
+                            android:backgroundTint="@color/royalblue"
+                            android:fontFamily="@font/spartan_semibold"
+                            android:lineSpacingExtra="12sp"
+                            android:text="@string/ucc_faculty_directory"
+                            android:textColor="@color/white"
+                            android:textStyle="bold"
+                            app:icon="@drawable/ic_baseline_people_24"
+                            app:iconGravity="textTop"
+                            app:iconPadding="16dp"
+                            app:iconSize="60dp"
+                            app:iconTint="@color/yellowyellow" />
+
+                        <Button
+                            android:id="@+id/courseButton"
+                            style="?android:attr/buttonBarButtonStyle"
+                            android:layout_width="190dp"
+                            android:layout_height="170dp"
+                            android:layout_marginLeft="6dp"
+                            android:layout_marginTop="200dp"
+                            android:layout_marginEnd="6dp"
+                            android:layout_marginRight="6dp"
+                            android:layout_marginBottom="6dp"
+                            android:backgroundTint="@color/royalblue"
+                            android:fontFamily="@font/spartan_semibold"
+                            android:lineSpacingExtra="12sp"
+                            android:text="@string/ucc_courses_programmes"
+                            android:textColor="@color/white"
+                            android:textStyle="bold"
+                            app:icon="@drawable/book_bookmark"
+                            app:iconGravity="textTop"
+                            app:iconPadding="16dp"
+                            app:iconSize="60dp"
+                            app:iconTint="@color/skyblue" />
+
+                    </TableRow>
+
+                    <TableRow
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent">
+
+                        <Button
+                            android:id="@+id/timetableButton"
+                            style="?android:attr/buttonBarButtonStyle"
+                            android:layout_width="190dp"
+                            android:layout_height="170dp"
+                            android:layout_marginLeft="6dp"
+                            android:layout_marginRight="6dp"
+                            android:layout_marginBottom="6dp"
+                            android:backgroundTint="@color/royalblue"
+                            android:fontFamily="@font/spartan_semibold"
+                            android:lineSpacingExtra="12sp"
+                            android:text="@string/ucc_timetable_calendar"
+                            android:textColor="@color/white"
+                            android:textStyle="bold"
+                            app:icon="@drawable/calendar"
+                            app:iconGravity="textTop"
+                            app:iconPadding="16dp"
+                            app:iconSize="60dp"
+                            app:iconTint="@color/brownbrown" />
+
+                        <Button
+                            android:id="@+id/admissionButton"
+                            style="?android:attr/buttonBarButtonStyle"
+                            android:layout_width="190dp"
+                            android:layout_height="170dp"
+                            android:layout_marginLeft="6dp"
+                            android:layout_marginEnd="6dp"
+                            android:layout_marginRight="6dp"
+                            android:layout_marginBottom="6dp"
+                            android:backgroundTint="@color/royalblue"
+                            android:fontFamily="@font/spartan_semibold"
+                            android:lineSpacingExtra="12sp"
+                            android:text="@string/admission_application"
+                            android:textColor="@color/white"
+                            android:textStyle="bold"
+                            app:icon="@drawable/graduation_cap"
+                            app:iconGravity="textTop"
+                            app:iconPadding="16dp"
+                            app:iconSize="60dp"
+                            app:iconTint="@color/lilac"
+                            tools:ignore="TextContrastCheck,TextContrastCheck" />
+
+                    </TableRow>
+
+                    <TableRow
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent">
+
+                        <Button
+                            android:id="@+id/socialmediaButton"
+                            style="?android:attr/buttonBarButtonStyle"
+                            android:layout_width="wrap_content"
+                            android:layout_height="match_parent"
+                            android:layout_marginLeft="6dp"
+                            android:layout_marginRight="6dp"
+                            android:layout_marginBottom="6dp"
+                            android:backgroundTint="@color/royalblue"
+                            android:fontFamily="@font/spartan_semibold"
+                            android:lineSpacingExtra="12sp"
+                            android:text="@string/ucc_social_media"
+                            android:textColor="@color/white"
+                            android:textStyle="bold"
+                            app:icon="@drawable/share"
+                            app:iconGravity="textTop"
+                            app:iconPadding="16dp"
+                            app:iconSize="60dp"
+                            app:iconTint="@color/paleyellow" />
+
+                        <Button
+                            android:id="@+id/emailfabButton"
+                            style="?android:attr/buttonBarButtonStyle"
+                            android:layout_width="190dp"
+                            android:layout_height="170dp"
+                            android:layout_marginLeft="6dp"
+                            android:layout_marginEnd="6dp"
+                            android:layout_marginRight="6dp"
+                            android:layout_marginBottom="6dp"
+                            android:backgroundTint="@color/royalblue"
+                            android:fontFamily="@font/spartan_semibold"
+                            android:lineSpacingExtra="12sp"
+                            android:text="@string/contact_ucc_email_fab"
+                            android:textColor="@color/white"
+                            android:textStyle="bold"
+                            app:icon="@drawable/envelope"
+                            app:iconGravity="textTop"
+                            app:iconPadding="16dp"
+                            app:iconSize="60dp"
+                            app:iconTint="@color/material_dynamic_neutral60" />
+                    </TableRow>
+
+                </TableLayout>
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+    </androidx.core.widget.NestedScrollView>
+
+</androidx.coordinatorlayout.widget.CoordinatorLayout>

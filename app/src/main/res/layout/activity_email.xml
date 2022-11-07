@@ -1,0 +1,168 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".EmailFAB.EmailActivity">
+
+    <androidx.coordinatorlayout.widget.CoordinatorLayout
+
+
+        android:id="@+id/coordinatorLayout2"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <com.google.android.material.appbar.AppBarLayout
+
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:backgroundTint="@color/material_dynamic_neutral60"
+            android:foregroundTint="@color/material_dynamic_neutral60">
+
+            <com.google.android.material.appbar.CollapsingToolbarLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                app:contentScrim="?attr/colorPrimary"
+                app:layout_scrollFlags="scroll|enterAlways|enterAlwaysCollapsed"
+
+                app:toolbarId="@+id/toolbar">
+
+
+                <Button
+                    android:id="@+id/back3"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:backgroundTint="@color/material_dynamic_neutral60"
+                    android:foregroundTint="@color/material_dynamic_neutral60"
+                    android:text="@string/main_menu"
+                    app:icon="@drawable/ic_baseline_arrow_back_24"
+                    app:iconSize="35dp"
+                    tools:ignore="SpeakableTextPresentCheck,TextContrastCheck" />
+
+                <androidx.appcompat.widget.Toolbar
+                    android:id="@+id/toolbar"
+                    android:layout_width="match_parent"
+                    android:layout_height="?attr/actionBarSize" />
+            </com.google.android.material.appbar.CollapsingToolbarLayout>
+        </com.google.android.material.appbar.AppBarLayout>
+
+        <androidx.core.widget.NestedScrollView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+
+
+            android:contentDescription="@string/layout11"
+            app:layout_behavior="com.google.android.material.appbar.AppBarLayout$ScrollingViewBehavior"
+            tools:ignore="SpeakableTextPresentCheck">
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                tools:context=".FacultyDirectory.FacultyActivity">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:orientation="vertical">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:orientation="vertical">
+
+                        <ImageView
+                            android:id="@+id/imageView4"
+                            android:layout_width="95dp"
+                            android:layout_height="63dp"
+                            android:layout_gravity="center_horizontal|center_vertical"
+                            android:layout_marginTop="40dp"
+                            android:contentDescription="@string/logo"
+                            app:srcCompat="@drawable/cropped" />
+
+                        <TextView
+                            android:id="@+id/contactTitle"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center_horizontal"
+                            android:layout_marginTop="25dp"
+                            android:fontFamily="@font/spartan_semibold"
+                            android:gravity="center_horizontal"
+                            android:text="@string/contact_it_head_of_department"
+                            android:textSize="18sp"
+                            android:textStyle="bold" />
+
+                        <View
+                            android:id="@+id/divider"
+                            android:layout_width="match_parent"
+                            android:layout_height="5dp"
+                            android:layout_marginTop="20dp"
+                            android:background="?android:attr/listDivider"
+                            android:backgroundTint="@color/material_dynamic_neutral60"
+                            android:backgroundTintMode="src_over"
+                            android:foregroundTint="@color/material_dynamic_neutral60" />
+
+                        <ImageView
+                            android:id="@+id/nataliepic"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginStart="120dp"
+                            android:layout_marginTop="30dp"
+                            android:contentDescription="@string/nataliepic"
+                            android:foregroundGravity="center"
+                            app:srcCompat="@drawable/it_hod" />
+                    </LinearLayout>
+
+                    <TextView
+                        android:id="@+id/nataliename"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center_horizontal"
+                        android:layout_marginTop="25dp"
+                        android:fontFamily="@font/spartan_semibold"
+                        android:gravity="center_horizontal"
+                        android:text="@string/name_ms_natalie_rose"
+                        android:textSize="18sp"
+                        android:textStyle="bold" />
+
+                    <TextView
+                        android:id="@+id/contactno"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center_horizontal"
+                        android:layout_marginTop="25dp"
+                        android:fontFamily="@font/spartan_semibold"
+                        android:gravity="center_horizontal"
+                        android:text="@string/contact_876_906_3000_ext_4046"
+                        android:textSize="18sp"
+                        android:textStyle="bold" />
+
+                    <Button
+                        android:id="@+id/emailhodButton"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:layout_marginTop="40dp"
+                        android:backgroundTint="@color/material_dynamic_neutral30"
+                        android:fontFamily="@font/spartan_semibold"
+                        android:gravity="center"
+                        android:paddingLeft="22dp"
+                        android:paddingTop="5dp"
+                        android:paddingRight="22dp"
+                        android:text="@string/email_hod"
+                        android:textColor="@color/white"
+                        android:textSize="22sp"
+                        android:textStyle="bold"
+                        app:icon="@drawable/paper_plane"
+                        app:iconGravity="start"
+                        app:iconSize="40dp" />
+
+                </LinearLayout>
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+        </androidx.core.widget.NestedScrollView>
+
+
+    </androidx.coordinatorlayout.widget.CoordinatorLayout>
+</androidx.constraintlayout.widget.ConstraintLayout>
